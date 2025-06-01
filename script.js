@@ -1,4 +1,3 @@
-let 總金額 = 120;
-let 商品數量 = 7;
-let 平均價格 = Math.round(總金額 / 商品數量);
-console.log(平均價格);
+let 分數 = 70;
+let 及格 = 60;
+console.log(分數 < 及格);
