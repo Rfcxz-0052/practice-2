@@ -7,7 +7,11 @@ function 新任務() {
         return;
     }
     const 任務 = document.createElement("li");
-    任務.textContent = 文字欄.value;
+    任務.innerHTML = `
+        <input type="checkbox" class="打勾方塊">
+        <label>${文字欄.value}</label>
+        <button class="垃圾桶">🗑</button>
+    `
     清單.append(任務);  //用 append (附加) 的語法 把新任務放到清單的底部
     文字欄.value = ""; //把文字欄清空，方便用戶輸入下一個任務
 };
