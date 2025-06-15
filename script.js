@@ -1,6 +1,2 @@
-//let 考試成績 = [85, 95, 75, 65, 55];
-
-function 打招呼(姓名){
-    console.log(`${姓名}你好!`);
-}
-打招呼("小安");
+const 任務 = document.querySelector("h1");
+console.log(任務.textContent);  //textContent 取得元素的文字內容
