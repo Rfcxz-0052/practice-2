@@ -1,7 +1,9 @@
 const 文字欄 = document.querySelector(".文字欄");
 
 文字欄.addEventListener("keyup", function(e){
-    console.log(e.key);
+    if(e.key === "Enter"){
+        console.log(文字欄.value);
+    }
 });
 
 //keyup 按下按鍵後放開
