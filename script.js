@@ -12,6 +12,26 @@ function 新任務() {
         <label>${文字欄.value}</label>
         <button class="垃圾桶">🗑</button>
     `
+
+    const 垃圾桶 = 任務.querySelector(".垃圾桶")
+    const 打勾方塊 = 任務.querySelector(".打勾方塊")
+
+    垃圾桶.addEventListener("click", function(){
+        任務.remove();
+    });  // remove 刪除
+
+    打勾方塊.addEventListener("change", function(){
+        if(打勾方塊.checked){
+            任務.style.textDecoration = "line-through";
+            任務.style.color = "#999";
+            清單.append(任務);
+        }else{
+            任務.style.textDecoration = "none";
+            任務.style.color = "";
+            清單.prepend(任務);  
+        }
+    })
+
     清單.append(任務);  //用 append (附加) 的語法 把新任務放到清單的底部
     文字欄.value = ""; //把文字欄清空，方便用戶輸入下一個任務
 };
